@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Subreddit;
+use App\Posts;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,6 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        $this->call([
+            SubredditSeeder::class,
+            PostsSeeder::class
+
+        ]);
+        
+        
     }
 }

@@ -24,5 +24,14 @@ Route::get('/users', function(){
     return User::all();
 });
 
+Route::group(['middleware' => 'auth:api'], function(){
+     Route::get('/logout', 'AuthController@logout');
+});
+
 Route::post('/register', 'AuthController@register');
 Route::post('/login', 'AuthController@login');
+
+Route::get('/allposts','PostController@index');
+
+
+
