@@ -3,14 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Resources\PostsCollection;
+use App\Post;
 
 class PostController extends Controller
 {
 
-    // public function index ()
-    // {
-    //     return new Posts(Post::with(['user', 'subreddit', 'ingredients'])->get());
-    // }
+    public function index ()
+    {
+        return new PostsCollection(Post::with(['user', 'subreddit'])->get());
+    }
 
     // public function getRecipesByUser ($userId) 
     // {

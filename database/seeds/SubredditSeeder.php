@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Subreddit;
+
 
 class SubredditSeeder extends Seeder
 {

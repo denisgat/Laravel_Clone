@@ -17,6 +17,7 @@ class CreateSubredditsTable extends Migration
             $table->id();
             $table->string('subredditname');
             $table->unsignedBigInteger('user_id');
+            $table->timestamps();
             
             $table->foreign('user_id')->references('id')->on('users');
         });

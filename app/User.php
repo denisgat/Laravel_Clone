@@ -11,6 +11,14 @@ class User extends Authenticatable
 {
     use HasApiTokens, Notifiable;
 
+    public function posts(){
+        $this->hasMany('App\Post');
+    }
+
+    public function subreddit(){
+        $this->hasMany('App\Subreddit');
+    }
+
     /**
      * The attributes that are mass assignable.
      *

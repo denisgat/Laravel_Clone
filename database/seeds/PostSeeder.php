@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+Use App\Post;
+
 class PostSeeder extends Seeder
 {
     /**
@@ -11,7 +13,7 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        $posts = [
+        $postArray = [
             [
             'id' => 1,
             'subreddit_id' => 1,
@@ -57,6 +59,10 @@ class PostSeeder extends Seeder
             // 'image' => '/...'
             ]
         ];
+
+        foreach ($postArray as &$Post) {
+            Post::create($Post);
+        }
 
     }
 }
