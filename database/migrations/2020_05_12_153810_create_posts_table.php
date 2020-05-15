@@ -24,7 +24,6 @@ class CreatePostsTable extends Migration
 
             $table->foreign('subreddit_id')->references('id')->on('subreddits');
             $table->foreign('user_id')->references('id')->on('users');
-            // $table->foreign('post_reddit_id_foreign')->references('id')->on('subreddits');
         });
     }
     

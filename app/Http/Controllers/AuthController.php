@@ -54,10 +54,6 @@ class AuthController extends Controller
 
         $token = $user->createToken('Laravel Password Grant Client')->accessToken;
 
-        // $response = [
-        //     'token' => $token,
-        //     'user' => $user,
-        // ];
 
         $token = $user->createToken($user->email . '-' . now());
 

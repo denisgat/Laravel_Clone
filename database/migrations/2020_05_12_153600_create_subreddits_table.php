@@ -16,6 +16,7 @@ class CreateSubredditsTable extends Migration
         Schema::create('subreddits', function (Blueprint $table) {
             $table->id();
             $table->string('subredditname');
+            $table->string('subredditdesc');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
             

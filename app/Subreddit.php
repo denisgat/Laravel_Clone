@@ -6,11 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Subreddit extends Model
 {
+
+    protected $fillable = [
+        'subredditname', 'subredditdesc', 'user_id',
+    ];
+
     public function user(){
-        $this->belongsto('App\User');
+        return  $this->belongsto('App\User');
     }
 
     public function posts(){
-        $this->hasMany('App\Post');
+        return $this->hasMany('App\Post');
     }
 }

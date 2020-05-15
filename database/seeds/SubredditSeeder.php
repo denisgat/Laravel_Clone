@@ -17,17 +17,21 @@ class SubredditSeeder extends Seeder
             [
             'id' => 1,
             'subredditname' => 'Cars',
-            'user_id' => 1
+            'user_id' => 1,
+            'subredditdesc' => 'A subreddit about cars'
             ],
             [
             'id' => 2,
             'subredditname' => 'Motorcycles',
-            'user_id' => 1
+            'user_id' => 1,
+            'subredditdesc' => 'A subreddit about motorcycles'
+            
             ],
             [
             'id' => 3,
             'subredditname' => 'News',
-            'user_id' => 2
+            'user_id' => 2,
+            'subredditdesc' => 'A subreddit about news'
             ]
         ];
 
