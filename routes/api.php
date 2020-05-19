@@ -27,6 +27,7 @@ Route::get('/users', function(){
 Route::group(['middleware' => 'auth:api'], function(){
      Route::post('/logout', 'AuthController@logout');
      Route::post('/subreddits/create', 'SubredditController@create');
+     Route::post('/post/create', 'PostController@create');
 });
 
 Route::post('/register', 'AuthController@register');

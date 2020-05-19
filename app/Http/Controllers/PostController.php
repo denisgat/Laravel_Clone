@@ -14,11 +14,18 @@ class PostController extends Controller
         return new PostsCollection(Post::with(['user', 'subreddit'])->get());
     }
 
-    // public function getRecipesByUser ($userId) 
-    // {
-    //     return new Recipes(Recipe::with(['user', 'tags', 'directions', 'ingredients'])->where('user_id', $userId)
-    //     ->get());
-    // }
+    public function create(Request $request){
+        // dd($request);
+        $input = ($request->all() == null ? json_decode($request->getContent(), true) : $request->all());
+
+        $post = Post::create([
+            'title' => $input['title'],
+            'user_id' => $input['user_id'],
+            'body' =>$input['body'],
+            'subreddit_id' =>$input['subreddit_id']
+        ]);
+
+    }
 
 
 }
