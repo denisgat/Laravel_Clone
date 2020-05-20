@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 
 use App\Subreddit;
 use App\Posts;
+use App\Comments;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,7 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             SubredditSeeder::class,
-            PostSeeder::class
+            PostSeeder::class,
+            CommentSeeder::class
 
         ]);
         

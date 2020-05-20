@@ -9,10 +9,6 @@ use App\Subreddit;
 class SubredditController extends Controller
 {
 
-    // public function recipeIds ($recipe_id)
-    // {
-    //     return Direction::where('recipe_id', $recipe_id)->get();
-    // }
 
     public function index (){
         $sub = Subreddit::latest()->get();
@@ -38,6 +34,8 @@ class SubredditController extends Controller
             'subredditdesc' =>$input['subdesc']
         ]);
 
+        
+        return Subreddit::latest()->get();
     }
 
 

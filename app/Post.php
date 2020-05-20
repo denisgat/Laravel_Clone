@@ -18,4 +18,8 @@ class Post extends Model
     return $this->belongsTo('App\Subreddit');
  }
 
+ public function comment(){
+    return $this->hasMany('App\Comment');
+ }
+
 }

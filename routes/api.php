@@ -28,13 +28,15 @@ Route::group(['middleware' => 'auth:api'], function(){
      Route::post('/logout', 'AuthController@logout');
      Route::post('/subreddits/create', 'SubredditController@create');
      Route::post('/post/create', 'PostController@create');
+     Route::post('/comment/create','CommentController@create');
 });
 
 Route::post('/register', 'AuthController@register');
 Route::post('/login', 'AuthController@login');
 
 Route::get('/allposts','PostController@index');
-Route::get('/subreddits','SubredditController@index');
+Route::get('/allsubreddits','SubredditController@index');
+Route::get('/allusers','UserController@index');
 Route::get('/subreddits/{id}', 'SubredditController@show');
 
 
