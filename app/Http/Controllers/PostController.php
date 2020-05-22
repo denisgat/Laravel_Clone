@@ -22,7 +22,8 @@ class PostController extends Controller
             'title' => $input['title'],
             'user_id' => $input['user_id'],
             'body' =>$input['body'],
-            'subreddit_id' =>$input['subreddit_id']
+            'subreddit_id' =>$input['subreddit_id'],
+            'image' => $input['img']
         ]);
 
         return new PostsCollection(Post::with(['user', 'subreddit', 'comment'])->get());
